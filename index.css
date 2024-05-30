@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" );
+body{
+  font-family: "Roboto",sans-serif;
+
+}
+.top{
+  display: flex;
+  background-color:white ;
+  align-items: center;
+  box-shadow: 0 4px 8px black;
+  
+ 
+
+
+}
+.logo{
+  margin:10px;
+  padding:10px;
+  
+}
+.searchbar{
+  display:flex;
+ 
+  align-items:center;
+  border-radius: 25px;
+  background-color:white;
+  width:500px;
+  height: 50px;
+  box-shadow: 0 4px 8px black;
+  background-color: none;
+  border: 2px solid ;
+  
+
+}
+.inp{
+ 
+  width:100%;
+  display:flex;
+  flex:1;
+  align-items:center;
+  border-radius: 10px;
+  border:none;
+  outline: none;
+  
+ 
+ 
+}
+
+#search{
+cursor:pointer;
+padding:10px;
+
+}
+
+li{
+  list-style: none;
+  display: inline-flex;
+  gap:50px;
+
+}
+a{
+  display: flex;
+  gap:50px;
+  padding:10px;
+  font-size: 20px;
+  margin:10px;
+  text-align: center;
+  text-decoration: none;
+  
+  color: grey;
+  font-weight: 600;
+  border-radius: 25px;
+  padding:15px 20px;
+  margin-left: 10px;
+
+}
+a:hover{
+  background-color: orange;
+
+}
+a:active{
+  background-color: rgb(120, 79, 3);
+}
+.n{
+width:100%;
+display: flex;
+gap:10px;
+padding:10px;
+font-size: 20px;
+ }
+
+ .containers{
+  padding: 20px;
+ }
+ .on{
+  background-color: orange;
+ }
