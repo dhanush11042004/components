@@ -8,6 +8,9 @@ body{
   background-color:white ;
   align-items: center;
   box-shadow: 0 4px 8px black;
+  font-family: "Roboto",sans-serif;
+  
+
   
  
 
@@ -29,6 +32,7 @@ body{
   box-shadow: 0 4px 8px black;
   background-color: none;
   border: 2px solid ;
+  font-family: "Roboto",sans-serif;
   
 
 }
@@ -41,6 +45,7 @@ body{
   border-radius: 10px;
   border:none;
   outline: none;
+  font-family: "Roboto",sans-serif;
   
  
  
@@ -72,9 +77,10 @@ a{
   border-radius: 25px;
   padding:15px 20px;
   margin-left: 10px;
+ transition: background-color 0.3s ease;
 
 }
-a:hover{
+a:hover {
   background-color: orange;
 
 }
@@ -91,7 +97,8 @@ font-size: 20px;
 
  .containers{
   padding: 20px;
+ 
  }
  .on{
-  background-color: orange;
+  background-color: rgb(244, 175, 48);
  }
