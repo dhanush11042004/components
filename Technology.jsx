@@ -1,22 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState,useContext } from 'react';
 import "./sprt.css"
 import locicon from '../assets/locicon.png'
 import imagenotfound from '../assets/imagenotfound.png'
 import loading from '../assets/loading.gif'
 import load from '../assets/load.png'
 import { countries } from '../App';
-
 const API_KEY = 'db0fdf442cb6417fb7b61b83a2293af9';
 
-const SportsNews = () => {
+const TechnologyNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const {selectedCountry,setselectedCountry}=useContext(countries)
-  
   useEffect(() => {
     const fetchNews = async () => {
-      let url = `https://newsapi.org/v2/top-headlines?country=${selectedCountry.slice(0,2)}&category=sports&apiKey=${API_KEY}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=${selectedCountry.slice(0,2)}&category=Technology&apiKey=${API_KEY}`;
       try {
         let res = await fetch(url);
         let data = await res.json();
@@ -30,6 +28,7 @@ const SportsNews = () => {
 
     fetchNews();
   }, [selectedCountry]);
+
   if (loading) {
     return <p id="loading" className='error'>Loading... please wait....</p>;
   }
@@ -38,7 +37,7 @@ const SportsNews = () => {
     return <p className='error'>check your internet connection and try again <br/>Error: {error}</p>;
   }
 
-  return <Sprt data={news} />;
+  return <Technology data={news} />;
 };
 const truncatetext=(text)=>{
   
@@ -83,12 +82,12 @@ const Website=(loc)=>{
    
   }
  
-export const Sprt=({ data })=> {
+export const Technology=({ data })=> {
   
   
   return (
     <div>
-      <h1>Sports News<span ><img className='locimg'src={locicon}/><span className='locname'>india</span></span></h1>
+      <h1>Technology News<span ><img className='locimg'src={locicon}/><span className='locname'>india</span></span></h1>
      <div className='whole'>{data.length === 0 ? (
         <p style={{color:'black', fontSize:'50px'}}>No news available</p>
       ) : (
@@ -125,4 +124,4 @@ export const Sprt=({ data })=> {
   );
 }
 
-export default SportsNews;
+export default TechnologyNews;
