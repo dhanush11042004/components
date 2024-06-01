@@ -85,10 +85,10 @@ const Website=(loc)=>{
  
 export const Sprt=({ data })=> {
   
-  
+  const {selectedCountry,setselectedCountry}=useContext(countries)
   return (
     <div>
-      <h1>Sports News<span ><img className='locimg'src={locicon}/><span className='locname'>india</span></span></h1>
+      <h1>Sports News<span ><img className='locimg'src={locicon}/><span className='locname'>{selectedCountry}</span></span></h1>
      <div className='whole'>{data.length === 0 ? (
         <p style={{color:'black', fontSize:'50px'}}>No news available</p>
       ) : (
